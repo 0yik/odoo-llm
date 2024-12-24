@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_llm_provider_list" model="ir.ui.view">
+        <field name="name">llm.provider.list</field>
+        <field name="model">llm.provider</field>
+        <field name="arch" type="xml">
+            <list string="LLM Providers">
+                <field name="name"/>
+                <field name="provider_type"/>
+                <field name="is_default"/>
+                <field name="company_id" groups="base.group_multi_company"/>
+                <field name="active"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_llm_provider_form" model="ir.ui.view">
+        <field name="name">llm.provider.form</field>
+        <field name="model">llm.provider</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" placeholder="Name"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="provider_type" options="{'no_create': True, 'no_open': True}"/>
+                            <field name="model_id" options="{'no_create': True, 'no_open': True}"/>
+                            <field name="api_key" password="True"/>
+                            <field name="api_endpoint"/>
+                        </group>
+                        <group>
+                            <field name="is_default"/>
+                            <field name="company_id" groups="base.group_multi_company"/>
+                            <field name="active"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_llm_provider" model="ir.actions.act_window">
+        <field name="name">LLM Providers</field>
+        <field name="res_model">llm.provider</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <!-- Menu -->
+    <menuitem id="menu_llm_root" 
+        name="LLM"
+        parent="base.menu_custom"
+        sequence="110"/>
+        
+    <menuitem id="menu_llm_provider"
+        name="Providers"
+        parent="menu_llm_root"
+        action="action_llm_provider"
+        sequence="100"/>
+</odoo>

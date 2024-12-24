@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_llm_provider_user,llm.provider.user,model_llm_provider,base.group_user,1,0,0,0
+access_llm_provider_system,llm.provider.system,model_llm_provider,base.group_system,1,1,1,1
+access_llm_model_user,llm.model.user,model_llm_model,base.group_user,1,0,0,0
+access_llm_model_system,llm.model.system,model_llm_model,base.group_system,1,1,1,1

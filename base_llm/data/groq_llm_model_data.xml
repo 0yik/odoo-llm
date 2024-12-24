@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Groq Models -->
+        <record id="llm_model_llama_70b_versatile" model="llm.model">
+            <field name="name">LLaMA 3.3 70B Versatile</field>
+            <field name="technical_name">llama-3.3-70b-versatile</field>
+            <field name="provider_type">groq</field>
+            <field name="context_length">128000</field>
+            <field name="description">LLaMA 3.3 70B model with 128k context window</field>
+            <field name="sequence">10</field>
+        </record>
+
+        <record id="llm_model_mixtral_8x7b" model="llm.model">
+            <field name="name">Mixtral 8x7B</field>
+            <field name="technical_name">mixtral-8x7b-32768</field>
+            <field name="provider_type">groq</field>
+            <field name="context_length">32768</field>
+            <field name="description">Mixtral 8x7B model with 32k context window</field>
+            <field name="sequence">20</field>
+        </record>
+
+        <record id="llm_model_gemma2_9b" model="llm.model">
+            <field name="name">Gemma 2 9B Instruct</field>
+            <field name="technical_name">gemma2-9b-it</field>
+            <field name="provider_type">groq</field>
+            <field name="context_length">8192</field>
+            <field name="description">Gemma 2 9B Instruct model with 8k context window</field>
+            <field name="sequence">30</field>
+        </record>
+
+        <record id="llm_model_llama3_70b" model="llm.model">
+            <field name="name">LLaMA 3 70B</field>
+            <field name="technical_name">llama3-70b-8192</field>
+            <field name="provider_type">groq</field>
+            <field name="context_length">8192</field>
+            <field name="description">LLaMA 3 70B model with 8k context window</field>
+            <field name="sequence">40</field>
+        </record>
+
+        <record id="llm_model_llama3_8b" model="llm.model">
+            <field name="name">LLaMA 3 8B</field>
+            <field name="technical_name">llama3-8b-8192</field>
+            <field name="provider_type">groq</field>
+            <field name="context_length">8192</field>
+            <field name="description">LLaMA 3 8B model with 8k context window</field>
+            <field name="sequence">50</field>
+        </record>
+
+        <record id="llm_model_llama3_8b_instant" model="llm.model">
+            <field name="name">LLaMA 3.1 8B Instant</field>
+            <field name="technical_name">llama-3.1-8b-instant</field>
+            <field name="provider_type">groq</field>
+            <field name="context_length">128000</field>
+            <field name="description">LLaMA 3.1 8B Instant model with 128k context window</field>
+            <field name="sequence">60</field>
+        </record>
+
+        <record id="llm_model_llama_guard" model="llm.model">
+            <field name="name">LLaMA Guard 3 8B</field>
+            <field name="technical_name">llama-guard-3-8b</field>
+            <field name="provider_type">groq</field>
+            <field name="context_length">8192</field>
+            <field name="description">LLaMA Guard 3 8B model with 8k context window</field>
+            <field name="sequence">70</field>
+        </record>
+    </data>
+</odoo>
